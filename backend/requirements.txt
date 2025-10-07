@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+autogen
+gitpython
+pytest
+pygithub
+python-dotenv
+openai
+requests
