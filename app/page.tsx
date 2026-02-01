@@ -137,13 +137,17 @@ export default function Pages() {
 
   // Check if user is logged in when the page loads
   useEffect(() => {
-    const loggedInStatus = sessionStorage.getItem("isLoggedIn");
-    if (loggedInStatus === "true") {
-      setIsLoggedIn(true);
-      router.push("/home"); // Redirect to home page if logged in
-    } else {
-      router.push("/login"); // Redirect to login page if not logged in
-    }
+    // For testing purposes, let's temporarily bypass login and go directly to dashboard
+    router.push("/dashboard");
+    
+    // Original logic - uncomment when you want to use login again
+    // const loggedInStatus = sessionStorage.getItem("isLoggedIn");
+    // if (loggedInStatus === "true") {
+    //   setIsLoggedIn(true);
+    //   router.push("/dashboard"); // Redirect to dashboard page if logged in
+    // } else {
+    //   router.push("/login"); // Redirect to login page if not logged in
+    // }
   }, [router]);
 
   return <div>Loading...</div>;

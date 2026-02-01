@@ -8,8 +8,8 @@ export default function LoginPage() {
   const router = useRouter();
 
   const handleLoginSuccess = () => {
-    // ✅ after login, redirect to the home page
-    router.push("/home");
+    // ✅ after login, redirect to the dashboard page
+    router.push("/dashboard");
   };
 
   return <LoginForm onSuccess={handleLoginSuccess} />;
